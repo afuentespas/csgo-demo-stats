@@ -1,0 +1,25 @@
+<div class="container-fluid py-5 text-white">
+    <div class="offset-lg-3 col-lg-6">
+        <csgo-card-form-demo-reader (onDemoReaded)="demoReaded($event)"></csgo-card-form-demo-reader>
+    </div>
+
+    <div *ngIf="isReadingFinished">
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="csgo-summary">
+                <div class="row">
+                    <div class="col-md-3">
+                        <csgo-card-general-info [matchHeader]="matchStats.header"></csgo-card-general-info>
+                    </div>
+                    <div class="col-md-9">
+                        <csgo-match-stats [teams]="matchStats.teams" [rounds]="matchStats.rounds"></csgo-match-stats>
+                    </div>
+                </div>
+            </div>
+            <div *ngFor="let player of matchStats.teams[0].players.concat(matchStats.teams[1].players)"
+                class="tab-pane fade" id="csgo-player-{{player.steam64Id}}" role="tabpanel"
+                [attr.aria-labelledby]="'csgo-player-' + player.steam64Id+'-tab'">
+                <csgo-tab-player-stats [player]="player"></csgo-tab-player-stats>
+            </div>
+        </div>
+    </div>
+</div>

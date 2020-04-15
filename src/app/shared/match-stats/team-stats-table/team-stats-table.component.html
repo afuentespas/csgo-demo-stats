@@ -1,0 +1,20 @@
+<div class="table-responsive">
+    <h2>{{team?.clanName && team.clanName || team.teamName }}</h2>
+    <table class="table table-sm text-white">
+        <thead>
+            <tr>
+                <th class="w-25">Nick</th>
+                <th class="text-center">K</th>
+                <th class="text-center">A (f)</th>
+                <th class="text-center">D</th>
+                <th class="text-center">MVP</th>
+                <th class="text-center">Score</th>
+                <th class="text-center">K/D</th>
+                <th class="text-center">HS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let player of team.players" csgo-player-stats-row [player]="player" [teamNumber]="team.teamNumber"></tr>
+        </tbody>
+    </table>
+</div>

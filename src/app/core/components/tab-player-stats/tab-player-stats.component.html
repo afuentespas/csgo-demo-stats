@@ -1,0 +1,20 @@
+<h2 class="h1 text-white">
+    <span *ngIf="player.clanTag" class="font-weight-bold">{{player.clanTag}} </span>{{player.name}}
+</h2>
+<div class="row">
+    <div class="col-lg-4 col-md-4">
+        <csgo-card-player-summary [player]="player"></csgo-card-player-summary>
+        <div class="mt-3">
+            <a class="btn btn-warning nav-item" data-toggle="pill" id="csgo-summary-tab" href="#csgo-summary">Go Back</a>
+        </div>
+    </div>
+    <div class="col-lg-8 col-md-8">
+        <div class="mb-3">
+            <csgo-card-player-weapons-pie [weaponsKills]="player.killsHistoric"></csgo-card-player-weapons-pie>
+        </div>
+        <csgo-card-player-kills-log 
+        [playerName]="player.name"
+        [playerClanTag]="player.clanTag"
+        [killsHistoric]="player.killsHistoric"></csgo-card-player-kills-log>
+    </div>
+</div>

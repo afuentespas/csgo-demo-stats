@@ -1,0 +1,30 @@
+<div class="row mb-3">
+    <div class="col-12">
+        <div class="table-responsive">
+            <table class="table table-sm w-100 bg-main-transparent">
+                <tr>
+                    <td class="text-center bg-primary team-score text-white px-2 h5">{{ teamScore1 }}</td>
+                    <ng-container *ngFor="let round of rounds; let numRound = index" >
+                         <td csgo-rounds-icons 
+                            [reasonCode]="round.endReasonCode"
+                            [teamIndex]="teamIndex1"
+                            [teamWinnerIndex]="round.teamWinnerIndex"
+                            [ngClass]="{'text-center ':true,'border-right':numRound == 14 || (numRound == 29 && rounds.length > 30)}">
+                        </td>
+                    </ng-container>
+                </tr>
+                <tr>
+                    <td class="text-center bg-primary team-score text-white px-2 h5">{{ teamScore2 }}</td>
+                    <ng-container *ngFor="let round of rounds; let numRound = index" >
+                        <td csgo-rounds-icons 
+                           [reasonCode]="round.endReasonCode"
+                           [teamIndex]="teamIndex2"
+                           [teamWinnerIndex]="round.teamWinnerIndex"
+                           [ngClass]="{'text-center ':true,'border-right':numRound == 14 || (numRound == 29 && rounds.length > 30)}">
+                       </td>
+                   </ng-container>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

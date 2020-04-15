@@ -1,0 +1,10 @@
+<td class="w-25">
+    <a id="csgo-player-{{player.steam64Id}}-tab" [ngClass]="{'text-primary' : teamNumber == 3, 'text-warning' : teamNumber == 2}" href="#csgo-player-{{player.steam64Id}}" data-toggle="pill"><span *ngIf="player.clanTag" class="font-weight-bold">{{player.clanTag}} </span>{{player.name}}</a>
+</td>
+<td class="text-center align-middle">{{player.kills}}</td>
+<td class="text-center align-middle">{{player.assists + player.flashAssists}} ({{player.flashAssists}})</td>
+<td class="text-center align-middle">{{player.deaths}}</td>
+<td class="text-center align-middle">{{player.mvps}}</td>
+<td class="text-center align-middle">{{player.score}}</td>
+<td class="text-center align-middle">{{player.kills/player.deaths | number:'1.0-2'}}</td>
+<td class="text-center align-middle">{{player.headShotKills}}</td>

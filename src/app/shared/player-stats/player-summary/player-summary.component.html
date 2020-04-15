@@ -1,0 +1,14 @@
+<ul list class="list-group list-group-flush">
+    <li class="list-group-item"><span class="text-warning">Kills:</span> <span class="float-right">{{player.kills}}</span></li>
+    <li class="list-group-item"><span class="text-warning">Assists:</span> <span class="float-right">{{player.assists}}</span></li>
+    <li class="list-group-item"><span class="text-warning">Flashbang Assists:</span> <span class="float-right">{{player.flashAssists}}</span></li>
+    <li class="list-group-item"><span class="text-warning">Deaths:</span> <span class="float-right">{{player.deaths}}</span></li>
+    <li class="list-group-item"><span class="text-warning">K/D:</span> <span class="float-right">{{player.kills/player.deaths | number:'1.0-2'}}</span></li>
+    <li class="list-group-item"><span class="text-warning">Headshots:</span> <span class="float-right">{{player.headShotKills}}</span></li>
+    <li class="list-group-item"><span class="text-warning">Headshots %:</span> <span class="float-right">{{headShotsPercentage | number:'1.0-2'}}%</span></li>
+    <li class="list-group-item"><span class="text-warning">Single Kill:</span> <span class="float-right">{{getNumberKillsPerRound(1)}}</span></li>
+    <li class="list-group-item"><span class="text-warning">Double Kill:</span> <span class="float-right">{{getNumberKillsPerRound(2)}}</span></li>
+    <li class="list-group-item"><span class="text-warning">Triple Kill:</span> <span class="float-right">{{getNumberKillsPerRound(3)}}</span></li>
+    <li class="list-group-item"><span class="text-warning">Quadra Kill:</span> <span class="float-right">{{getNumberKillsPerRound(4)}}</span></li>
+    <li class="list-group-item"><span class="text-warning">Ace:</span> <span class="float-right">{{getNumberKillsPerRound(5)}}</span></li>
+</ul>

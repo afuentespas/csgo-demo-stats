@@ -1,0 +1,16 @@
+<csgo-card *ngIf="!isReadingFinished" cardTitle="Upload your demo file">
+    <div body>
+        <div [hidden]="!isReadingDemoError" class="alert alert-danger" role="alert">{{ errorMsg }}</div>
+        <csgo-form-demo-reader 
+            [hidden]="isReadingDemo" 
+            (onProgressUpdate)="updateProgressBar($event)"
+            (onStart)="start()" 
+            (onError)="error($event)" 
+            (onEnd)="end($event)">
+        </csgo-form-demo-reader>
+        <div [hidden]="!isReadingDemo" class="progress-info">
+            <p class="text-center">Reading the file. Please, wait a few moments...</p>
+            <csgo-progress-bar [percentage]="percentageLoading"></csgo-progress-bar>
+        </div>
+    </div>
+</csgo-card>

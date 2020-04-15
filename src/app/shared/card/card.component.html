@@ -1,0 +1,8 @@
+<div class="card text-white bg-primary">
+    <div *ngIf="cardTitle" class="card-header">{{ cardTitle }}</div>
+    <img *ngIf="image" class="card-img-top" src="{{image}}" alt="Image">
+    <div class="card-body">
+        <ng-content select="[body]"></ng-content>
+    </div>
+    <ng-content select="[list]"></ng-content>
+</div>

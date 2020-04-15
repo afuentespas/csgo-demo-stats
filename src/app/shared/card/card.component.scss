@@ -1,0 +1,20 @@
+@import '../../../assets/theme/colors';
+
+.card {
+    &.bg-primary {
+        background-color: transparent !important;
+        & .card-header {
+            background-color: $primary !important;
+        }
+        & .card-body {
+            background-color: $primary-transparent !important;
+            
+            &:empty{
+                display: none;
+            }
+        }
+        & ::ng-deep .list-group-item {
+            background-color: $primary-transparent !important;
+        }
+    }
+}

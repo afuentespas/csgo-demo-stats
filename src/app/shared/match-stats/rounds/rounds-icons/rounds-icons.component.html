@@ -1,0 +1,10 @@
+<span *ngIf="teamIndex == teamWinnerIndex">
+    <ng-container [ngSwitch]="reasonCode">
+        <i *ngSwitchCase="1" class="fas fa-bomb text-warning"></i>
+        <i *ngSwitchCase="7" class="fas fa-cut text-primary"></i>
+        <i *ngSwitchCase="8" class="fas fa-skull text-primary"></i>
+        <i *ngSwitchCase="9" class="fas fa-skull text-warning"></i>
+        <i *ngSwitchCase="12" class="far fa-clock text-primary"></i>
+        <i *ngSwitchDefault>{{reasonCode}}</i>
+    </ng-container>
+</span>

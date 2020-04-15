@@ -1,0 +1,7 @@
+@import '../../../../assets/theme/colors';
+tr {
+    background-color: $primary-transparent !important;
+    &:first-child > td{
+        border-top: none;
+    }
+}

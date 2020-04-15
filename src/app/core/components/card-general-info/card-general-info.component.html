@@ -1,0 +1,10 @@
+<csgo-card image="/assets/images/maps/{{ matchHeader.mapName }}.jpg">
+    <ul list class="list-group list-group-flush">
+        <li class="list-group-item"><strong class="text-info">Map:</strong> {{ matchHeader.mapName }}</li>
+        <li class="list-group-item"><strong class="text-info">Duration:</strong> {{ matchHeader.duration }}</li>
+        <li class="list-group-item"><strong class="text-info">Date:</strong> {{ matchHeader.date | date: 'dd/MM/yyyy H:mm' }}</li>
+        <li class="list-group-item"><strong class="text-info">Server Tickrate:</strong> {{ matchHeader.tickRate }}</li>
+        <li class="list-group-item"><strong class="text-info">Server name:</strong> {{ matchHeader.serverName }}</li>
+        <li class="list-group-item"><strong class="text-info">Client name:</strong> {{ matchHeader.clientName }}</li>
+    </ul>
+</csgo-card>

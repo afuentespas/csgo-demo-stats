@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
+@import './assets/theme/colors';
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background: url("http://media.steampowered.com/apps/csgo/blog/images/wallpaper_nologo.jpg") no-repeat center center fixed;;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bg-primary {
+    background-color: $primary !important;
+}
+
+.team-score{
+    border: none;
+}
+
+::-webkit-scrollbar{
+    height: 8px;
+    width: 8px;
+}
+::-webkit-scrollbar-track{
+    background: darken($secondary, 10%);
+    border-radius:0px
+}
+::-webkit-scrollbar-thumb{
+    background: lighten($primary, 10%);
+    border-radius:0px
+}

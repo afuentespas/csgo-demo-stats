@@ -1,0 +1,13 @@
+@import '../../../../assets/theme/colors';
+
+thead {
+    background-color: $primary;
+}
+
+tbody {
+    background-color: $primary-transparent;
+}
+
+h2 {
+    color: $tertiary;
+}
